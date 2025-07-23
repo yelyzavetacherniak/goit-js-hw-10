@@ -5,15 +5,11 @@
   display: flex;
   justify-content: space-between;
 }
-.nav-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+
 .nav-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 40px;
 }
 .nav-link {

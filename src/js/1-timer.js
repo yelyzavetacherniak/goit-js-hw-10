@@ -37,10 +37,10 @@ const options = {
           const closeBtn = toast.querySelector('.iziToast-close');
           if (closeBtn) {
             closeBtn.style.backgroundImage = `url(${closeIcon})`;
-            closeBtn.style.backgroundSize = '16px 16px';
+            closeBtn.style.backgroundSize = '12px 12px';
             closeBtn.style.backgroundRepeat = 'no-repeat';
             closeBtn.style.backgroundPosition = 'center';
-            closeBtn.style.color = 'transparent';
+            closeBtn.style.color = '#ffffff';
           }
         },
       });

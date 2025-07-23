@@ -15,6 +15,14 @@
 @import url('./vite-promo.css');
 @import url('./back-link.css');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Timer */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -156,7 +164,6 @@
   color: #666;
 }
 
-/* Базовий стиль */
 .flatpickr-day.today:not(.selected) {
   border: 1px solid #3f51b5 !important;
   color: #666 !important;
@@ -169,4 +176,149 @@
   background-color: #4e75ff !important;
   color: white !important;
   border: none !important;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.label-delay {
+  margin-bottom: 8px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 360px;
+  margin-bottom: 16px;
+}
+
+.label-delay:hover,
+.label-delay:focus {
+  border: 1px solid #000;
+}
+
+#delay {
+  margin-bottom: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding-left: 16px;
+  outline: none;
+}
+
+#delay:hover {
+  border-color: #000000;
+}
+
+#delay:focus {
+  border: 1px solid #4e75ff;
+}
+
+.fieldset {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 360px;
+
+  padding: 12px 16px;
+}
+
+.fieldset label + label {
+  margin-left: 16px;
+}
+
+.fieldset div {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.fieldset:focus,
+.fieldset:hover {
+  border-color: #000;
+}
+
+.input-set {
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+}
+
+.input-set {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #757575;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.input-set:hover {
+  border: 1px solid #000000;
+}
+
+.input-set:checked {
+  border-color: #4e75ff;
+  background-color: #fff;
+  position: relative;
+}
+
+.input-set:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4e75ff;
+  transform: translate(-50%, -50%);
+}
+
+.btn-msg {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-msg:hover,
+.btn-msg:focus {
+  background: #6c8cff;
 }
